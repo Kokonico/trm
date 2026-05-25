@@ -19,11 +19,11 @@ EXPLOSIONS_DIR = os.path.join(SFX_DIR, 'Explosions')
 threads = []
 
 def get_random_scream():
-	screams = [f for f in os.listdir(SCREAMS_DIR) if f.endswith('.mp3')]
+	screams = [f for f in os.listdir(SCREAMS_DIR) if f.endswith('.mp3') or f.endswith('.wav')]
 	return os.path.join(SCREAMS_DIR, random.choice(screams))
 
 def get_random_explosion():
-	explosions = [f for f in os.listdir(EXPLOSIONS_DIR) if f.endswith('.mp3')]
+	explosions = [f for f in os.listdir(EXPLOSIONS_DIR) if f.endswith('.mp3') or f.endswith('.wav')]
 	return os.path.join(EXPLOSIONS_DIR, random.choice(explosions))
 
 def play_scream_and_explosion():
